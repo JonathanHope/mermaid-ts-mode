@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<title>README.html</title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+
+</head>
+
+<body>
+
+<h1 id="mermaid-ts-mode.el">mermaid-ts-mode.el</h1>
+
+<p>Major mode for working with <a href="http://mermaid.js.org">mermaid</a>. It&#8217;s built on tree sitter, and thus required Emacs 29 or better.</p>
+
+<figure>
+<img src="mermaid-ts-mode.png" alt="" />
+<figcaption></figcaption>
+</figure>
+
+<h2 id="installation">Installation</h2>
+
+<p>This hasn&#8217;t made it&#8217;s way to MELPA yet. Here is how to install it with straight:</p>
+
+<pre><code class="elisp">(use-package mermaid-ts-mode
+  :defer t
+  :straight (:type git :host github :repo &quot;JonathanHope/mermaid-ts-mode&quot; :branch &quot;main&quot; :files (&quot;mermaid-ts-mode.el&quot;)))
+</code></pre>
+
+<p>You will also need the following tree sitter grammar: <a href="https://github.com/monaqa/tree-sitter-mermaid">https://github.com/monaqa/tree-sitter-mermaid</a>.</p>
+
+<h2 id="features">Features</h2>
+
+<ul>
+<li>[x] Syntax highlighting</li>
+<li>[x] Indentation</li>
+<li>[ ] imenu</li>
+</ul>
+
+<h1 id="customizevariables">Customize Variables</h1>
+
+<ul>
+<li><strong>mermaid-ts-indent-level (default 2):</strong> Indentation level</li>
+</ul>
+
+<h1 id="diagramsupport">Diagram Support</h1>
+
+<p>Mermaid is huge and not all of it is perfectly supported by this mode.</p>
+
+<h2 id="flowchart">Flowchart</h2>
+
+<p>Flowchart support should be pretty solid.</p>
+
+<h2 id="classdiagram">Class Diagram</h2>
+
+<p>Some of the class diagram stuff isn&#8217;t well supported by the treesitter grammar.</p>
+
+<ul>
+<li>[ ] class notes</li>
+<li>[ ] class labels</li>
+<li>[ ] namepace</li>
+<li>[ ] link</li>
+<li>[ ] click</li>
+<li>[ ] callback</li>
+</ul>
+
+<p>For some reason class members with parntheses don&#8217;t indent properly.</p>
+
+<h2 id="sequencediagram">Sequence Diagram</h2>
+
+<p>A lot of sequence diagram stuff isn&#8217;t well supported by the treesitter grammar.</p>
+
+<ul>
+<li>[ ] create/destroy</li>
+<li>[ ] box</li>
+<li>[ ] activate/deactivate</li>
+<li>[ ] loops</li>
+<li>[ ] alt</li>
+<li>[ ] parallel</li>
+<li>[ ] critical</li>
+<li>[ ] break</li>
+<li>[ ] rect</li>
+</ul>
+
+<h2 id="statediagram">State Diagram</h2>
+
+<p>State diagram support should be pretty solid. Only one thing wasn&#8217;t supported by treesitter grammar:</p>
+
+<ul>
+<li>[ ] note block</li>
+</ul>
+
+<h2 id="entityrelationdiagram">Entity Relation Diagram</h2>
+
+<p>Entity Relation Diagram support should be pretty solid.</p>
+
+<h2 id="userjourney">User Journey</h2>
+
+<p>User Journeys are not supported at this time by the treesitter grammar, or this mode.</p>
+
+<h2 id="gantt">Gantt</h2>
+
+<p>Gantt chart support should be pretty solid. Only a couple of things weren&#8217;t supported by treesitter grammar:</p>
+
+<ul>
+<li>[ ] tick interval</li>
+<li>[ ] weekday</li>
+</ul>
+
+<h2 id="quadrantchart">Quadrant Chart</h2>
+
+<p>Quadrant charts are not supported at this time by the treesitter grammar, or this mode.</p>
+
+<h2 id="requirementdiagram">Requirement Diagram</h2>
+
+<p>Requirement diagrams are not supported at this time by the treesitter grammar, or this mode.</p>
+
+<h2 id="gitgraphdiagrams">Gitgraph Diagrams</h2>
+
+<p>Gitgraph diagrams are not supported at this time by the treesitter grammar, or this mode.</p>
+
+<h2 id="c4diagrams">C4 Diagrams</h2>
+
+<p>C4 diagrams are not supported at this time by the treesitter grammar, or this mode.</p>
+
+<h2 id="mindmapdiagrams">Mindmap Diagrams</h2>
+
+<p>Mindmap are not supported at this time by the treesitter grammar, or this mode.</p>
+
+<h2 id="timelinediagrams">Timeline Diagrams</h2>
+
+<p>Timeline diagrams are not supported at this time by the treesitter grammar, or this mode.</p>
+
+<h2 id="zenuml">ZenUML</h2>
+
+<p>ZenUML not supported at this time by the treesitter grammar, or this mode.</p>
+
+<h2 id="sankey">Sankey</h2>
+
+<p>Sankey diagrams are not supported at this time by the treesitter grammar, or this mode.</p>
+
+</body>
+</html>
