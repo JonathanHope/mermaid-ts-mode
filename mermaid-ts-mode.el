@@ -128,6 +128,7 @@
      ((parent-is "class_stmt_class") parent-bol mermaid-ts-indent-level)
      ((parent-is "subgraph") parent-bol mermaid-ts-indent-level))))
 
+;;;###autoload
 (define-derived-mode mermaid-ts-mode prog-mode "Mermaid"
   "Mermaid Tresitter Mode"
   :group 'mermaid
