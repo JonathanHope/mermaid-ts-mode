@@ -1,12 +1,12 @@
 # mermaid-ts-mode.el
 
-Major mode for working with [mermaid](http://mermaid.js.org). It's built on tree sitter, and thus required Emacs 29 or better.
+Major mode for working with [mermaid](http://mermaid.js.org). It's built on tree sitter, and thus requires Emacs 29 or better.
 
 ![](mermaid-ts-mode.png)
 
 ## Installation
 
-This hasn't made it's way to MELPA yet. Here is how to install it with straight:
+This hasn't made its way to MELPA yet. Here is how to install it with straight:
 
 ``` elisp
 (use-package mermaid-ts-mode
