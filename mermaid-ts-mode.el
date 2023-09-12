@@ -1,10 +1,15 @@
-;;; mermaid-ts-mode.el --- Major mode for Mermaid.
+;;; mermaid-ts-mode.el --- Major mode for Mermaid. -*- lexical-binding: t; -*-
 
 ;; Copyright (C) 2023 Jonathan Hope
 
 ;; Author: Jonathan Hope <jhope@theflatfield.net>
 ;; Version: 1.0
 ;; Keywords: mermaid
+
+;;; Commentary:
+
+;; Mermaid is a language to programatically define diagrams.
+;; This is a major mode for mermaid built on tree sitter.
 
 ;;; Code:
 
@@ -34,7 +39,7 @@
   :group 'mermaid)
 
 (defvar mermaid-ts--syntax-table
-  (let ((table (make-syntax-table)))    
+  (let ((table (make-syntax-table)))
     table)
   "Syntax table for `mermaid-ts-mode'.")
 
@@ -130,7 +135,6 @@
 
 ;;;###autoload
 (define-derived-mode mermaid-ts-mode prog-mode "Mermaid"
-  "Mermaid Tresitter Mode"
   :group 'mermaid
   :syntax-table mermaid-ts--syntax-table
   
