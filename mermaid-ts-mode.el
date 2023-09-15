@@ -5,6 +5,7 @@
 ;; Author: Jonathan Hope <jhope@theflatfield.net>
 ;; Version: 1.0
 ;; Keywords: mermaid
+;; Package-Requires: ((emacs "29.1"))
 
 ;;; Commentary:
 
