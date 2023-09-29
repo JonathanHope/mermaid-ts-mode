@@ -1,11 +1,27 @@
-;;; mermaid-ts-mode.el --- Major mode for Mermaid. -*- lexical-binding: t; -*-
+;;; mermaid-ts-mode.el --- Major mode for Mermaid -*- lexical-binding: t; -*-
 
 ;; Copyright (C) 2023 Jonathan Hope
 
 ;; Author: Jonathan Hope <jhope@theflatfield.net>
 ;; Version: 1.0
-;; Keywords: mermaid
+;; Keywords: mermaid, languages
 ;; Package-Requires: ((emacs "29.1"))
+;; Homepage: https://github.com/JonathanHope/mermaid-ts-mode
+
+;; This file is part of GNU Emacs.
+
+;; This program is free software: you can redistribute it and/or modify
+;; it under the terms of the GNU General Public License as published by
+;; the Free Software Foundation, either version 3 of the License, or
+;; (at your option) any later version.
+
+;; This program is distributed in the hope that it will be useful,
+;; but WITHOUT ANY WARRANTY; without even the implied warranty of
+;; MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+;; GNU General Public License for more details.
+
+;; You should have received a copy of the GNU General Public License
+;; along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 ;;; Commentary:
 
@@ -24,7 +40,7 @@
 (declare-function treesit-node-start "treesit.c")
 (declare-function treesit-node-type "treesit.c")
 
-(defgroup mermaid nil
+(defgroup mermaid-ts nil
   "Support mermaid code."
   :link '(url-link "http://mermaid.js.org/")
   :group 'languages)
@@ -32,12 +48,12 @@
 (defcustom mermaid-ts-mode-hook nil
   "Hook called by `mermaid-ts-mode'."
   :type 'hook
-  :group 'mermaid)
+  :group 'mermaid-ts)
 
 (defcustom mermaid-ts-indent-level 2
   "The tab width to use when indenting."
   :type 'integer
-  :group 'mermaid)
+  :group 'mermaid-ts)
 
 (defvar mermaid-ts--syntax-table
   (let ((table (make-syntax-table)))
@@ -136,7 +152,7 @@
 
 ;;;###autoload
 (define-derived-mode mermaid-ts-mode prog-mode "Mermaid"
-  :group 'mermaid
+  :group 'mermaid-ts
   :syntax-table mermaid-ts--syntax-table
   
   (unless (treesit-ready-p 'mermaid)
