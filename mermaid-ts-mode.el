@@ -82,7 +82,7 @@
    
    :language 'mermaid
    :feature 'keywords
-   '(["flowchart" "subgraph" "end" "direction" "sequenceDiagram" "participant" "actor" "as" "stateDiagram-v2" "stateDiagram" "state " "note " "erdiagram" "classDiagram" "class" "gantt" "title" "dateformat" "section" "axisformat" "pie"] @font-lock-keyword-face
+   '(["flowchart" "subgraph" "end" "direction" "sequenceDiagram" "participant" "actor" "as" "stateDiagram-v2" "stateDiagram" "state " "note " "erdiagram" "classDiagram" "class" "gantt" "title" "dateformat" "section" "axisformat" "pie" "opt" "loop"] @font-lock-keyword-face
      (state_annotation_choice) @font-lock-keyword-face
      (state_annotation_fork) @font-lock-keyword-face
      (state_annotation_join) @font-lock-keyword-face)
@@ -146,7 +146,9 @@
      ((parent-is "state_composite_body") parent-bol mermaid-ts-indent-level)
      ((parent-is "er_stmt_entity_block") parent-bol mermaid-ts-indent-level)
      ((parent-is "class_stmt_class") parent-bol mermaid-ts-indent-level)
-     ((parent-is "subgraph") parent-bol mermaid-ts-indent-level))))
+     ((parent-is "subgraph") parent-bol mermaid-ts-indent-level)
+     ((parent-is "sequence_stmt_opt") parent-bol mermaid-ts-indent-level)
+     ((parent-is "sequence_stmt_loop") parent-bol mermaid-ts-indent-level))))
 
 ;;;###autoload
 (define-derived-mode mermaid-ts-mode prog-mode "Mermaid"
