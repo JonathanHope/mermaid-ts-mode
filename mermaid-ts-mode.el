@@ -171,6 +171,11 @@
   (setq-local treesit-font-lock-settings mermaid-ts--treesit-font-lock-rules)
   
   (treesit-major-mode-setup))
-   
+
+;; Our treesit-font-lock-rules expect this version of the grammar:
+(add-to-list 'treesit-language-source-alist
+             '(mermaid . ("https://github.com/monaqa/tree-sitter-mermaid" "master")))
+
+
 (provide 'mermaid-ts-mode)
 ;;; mermaid-ts-mode.el ends here
