@@ -146,7 +146,8 @@
      ((parent-is "state_composite_body") parent-bol mermaid-ts-indent-level)
      ((parent-is "er_stmt_entity_block") parent-bol mermaid-ts-indent-level)
      ((parent-is "class_stmt_class") parent-bol mermaid-ts-indent-level)
-     ((parent-is "subgraph") parent-bol mermaid-ts-indent-level))))
+     ((parent-is "subgraph") parent-bol mermaid-ts-indent-level)
+     (no-node parent-bol 0))))
 
 ;;;###autoload
 (define-derived-mode mermaid-ts-mode prog-mode "Mermaid"
